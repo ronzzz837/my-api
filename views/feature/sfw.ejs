@@ -1,0 +1,126 @@
+  <div class="main-wrapper"> 
+    <%- include('../layouts/navbar.ejs') %>
+    
+    <div class="page-wrapper">
+      <%- include('../layouts/sidebar.ejs') %>
+      
+      <div class="page-content">
+        
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card"> 
+              <div class="card-body">
+                <h4 class="card-title">Random Anime API</h4>
+                <p class="text-muted mb-3">Feature Random Anime (sfw) <span>/anime/sfw/:name</span></p>
+                <div class="mb-3">
+                  <select class="form-select" id="form-select" data-width="100%">
+                    <option selected>Select Here</option>
+                    <option value='ahegao'>ahegao</option>
+                    <option value='hitorigottoh'>hitorigottoh</option>
+                    <option value='megumin'>megumin</option>
+                    <option value='sakura'>sakura</option>
+                    <option value='akira'>akira</option>
+                    <option value='inori'>inori</option>
+                    <option value='mikasa'>mikasa</option>
+                    <option value='sasuke'>sasuke</option>
+                    <option value='akiyama'>akiyama</option>
+                    <option value='isuzu'>isuzu</option>
+                    <option value='miku'>miku</option>
+                    <option value='shina'>shina</option>
+                    <option value='ana'>ana</option>
+                    <option value='itachi'>itachi</option>
+                    <option value='minato'>minato</option>
+                    <option value='shinka'>shinka</option>
+                    <option value='asuna'>asuna</option>
+                    <option value='itori'>itori</option>
+                    <option value='naruto'>naruto</option>
+                    <option value='shizuka'>shizuka</option>
+                    <option value='ayuzawa'>ayuzawa</option>
+                    <option value='kaga'>kaga</option>
+                    <option value='natsukawa'>natsukawa</option>
+                    <option value='shota'>shota</option>
+                    <option value='boruto'>boruto</option>
+                    <option value='kagura'>kagura</option>
+                    <option value='neko'>neko</option>
+                    <option value='tomori'>tomori</option>
+                    <option value='chitanda'>chitanda</option>
+                    <option value='kakashi'>kakashi</option>
+                    <option value='nekonime'>nekonime</option>
+                    <option value='toukachan'>toukachan</option>
+                    <option value='chitoge'>chitoge</option>
+                    <option value='kaori'>kaori</option>
+                    <option value='nezuko'>nezuko</option>
+                    <option value='tsunade'>tsunade</option>
+                    <option value='deidara'>deidara</option>
+                    <option value='keneki'>keneki</option>
+                    <option value='nishimiya'>nishimiya</option>
+                    <option value='waifu'>waifu</option>
+                    <option value='doraemon'>doraemon</option>
+                    <option value='kosaki'>kosaki</option>
+                    <option value='onepiece'>onepiece</option>
+                    <option value='waifu.txt'>waifu.txt</option>
+                    <option value='elaina'>elaina</option>
+                    <option value='kotori'>kotori</option>
+                    <option value='pokemon'>pokemon</option>
+                    <option value='waifu2'>waifu2</option>
+                    <option value='emilia'>emilia</option>
+                    <option value='kuriyama'>kuriyama</option>
+                    <option value='ppcouple'>ppcouple</option>
+                    <option value='wallhp2'>wallhp2</option>
+                    <option value='erza'>erza</option>
+                    <option value='kuroha'>kuroha</option>
+                    <option value='ppcouple2.js'>ppcouple2.js</option>
+                    <option value='yatogami'>yatogami</option>
+                    <option value='gremory'>gremory</option>
+                    <option value='kurumi'>kurumi</option>
+                    <option value='rem'>rem</option>
+                    <option value='yuki'>yuki</option>
+                    <option value='hestia'>hestia</option>
+                    <option value='loli'>loli</option>
+                    <option value='rize'>rize</option>
+                    <option value='yuri'>yuri</option>
+                    <option value='hinata'>hinata</option>
+                    <option value='madara'>madara</option>
+                    <option value='sagiri'>sagiri</option>
+                  </select>
+                </div>
+                <div class="form-group mb-3">
+                  <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+                </div>
+              </div>
+            </div>       
+          </div>        
+          
+           <div class="col-md-4 grid-margin stretch-card" id="resultCard" style="display: none;">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Result Image</h4>
+                <div id="resultImageContainer"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div> 
+      </div>
+    </div> 
+  </div>
+  <script>
+    function fetchData(value) {
+      console.log(window.location.origin)	
+      const apiUrl = window.location.origin + `/random/sfw/${value}?apikey=<%= user.apikey %>`;
+
+      const resultCard = document.getElementById('resultCard');
+      const resultImageContainer = document.getElementById('resultImageContainer');
+
+      resultImageContainer.innerHTML = `<img src="${apiUrl}" alt="Result Image" style="max-width: 100%;">`;
+      resultCard.style.display = 'block';
+    }
+
+    const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', function() {
+      const dropdown = document.getElementById('form-select');
+      const selectedValue = dropdown.value;
+
+      fetchData(selectedValue);
+    });
+  </script>

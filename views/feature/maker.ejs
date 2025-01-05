@@ -1,0 +1,312 @@
+    <div class="main-wrapper">
+      <%- include('../layouts/navbar.ejs') %>
+
+      <div class="page-wrapper">
+        <%- include('../layouts/sidebar.ejs') %>
+
+        <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="detailModalLabel">Detail Options</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="modal-body text-center" id="modalContent">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-content">
+
+          <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title"> Maker API </h6>
+                  <p class="text-muted mb-3"> Maker / Image maker <code> /maker/endpoint </code></p>
+                  <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Parameter</th>
+                          <th>Method</th>
+                          <th>Status</th>
+                          <th>Try</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Welcome</td>
+                          <td>url profile, name, url background, group name, total member, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/welcome?ppurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&name=Ronzz YT&bgurl=https://telegra.ph/file/c792631587035c6cd185e.jpg&gcname=Ronzz API&gcurl=https://telegra.ph/file/09261a96ed184267c2083.jpg&member=1&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Goodbye</td>
+                          <td>url profile, name, url background, total member, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/goodbye?ppurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&name=Ronzz YT&bgurl=https://telegra.ph/file/c792631587035c6cd185e.jpg&gcurl=https://telegra.ph/file/09261a96ed184267c2083.jpg&member=1&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Attp</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/attp?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Ttp</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/ttp?teks=teks&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>KTP</td>
+                          <td>nik, provinsi, kabupaten, name, ttl, jenis kelamin, alamat, rt/rw, lurah, kecamatan, agama, nikah, kerja, warga, berlaku hingga, url image, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/ktp?nik=123456789&provinsi=Jawa Barat&kabupaten=Konoha&name=Ronzz YT&ttl=Konoha, 01-02-0304&jeniskelamin=Laki-laki&alamat=Jl. Pandawara&rtrw=99/99&lurah=Cihuy&kecamatan=Alamakk&agama=Islam&nikah=Belum&kerja=Progammer&warga=WNI&berlakuhingga=Seumur Hidup&ppurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Kartu Nikah</td>
+                          <td>url image, url image, qr code, nama suami, nama istri, tanggal, kecamatan, provinsi, akta, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/kartunikah?ppsuami=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&ppistri=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&qrcode=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&suami=Tahu&istri=Tempe&tanggal=01 Februari 0304&kecamatan=Alamakk&kabupaten=Konoha&provinsi=Jawa Barat&akta=XXXX/XXXX/VI/0304&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Among Us</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/amongus?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>Spotify</td>
+                          <td>url image, author, album, title, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/spotify?bgurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&author=Ronzz YT&album=Ronzz API&title=Ku ingin melihatmu&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>Rank</td>
+                          <td>url image, name, level, url image, current exp, required exp, url image, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/rank?ppurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&name=Ronzz YT&level=3&rankurl=https://i.ibb.co/Wn9cvnv/FABLED.png&cexp=65&rexp=100&bgurl=https://telegra.ph/file/c792631587035c6cd185e.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>Level Up</td>
+                          <td>url image, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/levelup?ppurl=https://telegra.ph/file/cacae14f5b35238f5442c.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>Captcha</td>
+                          <td>captcha key, url image, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/captcha?captchakey=JgsuajkHq816ba0&bgurl=https://telegra.ph/file/c792631587035c6cd185e.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>Nulis</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/nulis?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td>Carbon</td>
+                          <td>code, language, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/carbon?code=const me = require('Ronzz-YT');&language=JavaScript&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td>Donald Trump Tweet</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/tweettrump?teks=Ronzz API keren cuy&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td>Google Suggest</td>
+                          <td>teks 1, teks 2, teks 3, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/gsuggest?teks1=Ronzz YT&teks2=Ronzz API&teks3=Bot WhatsApp Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>16</td>
+                          <td>Idul Fitri</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/idulfitri?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>17</td>
+                          <td>Invoice</td>
+                          <td>produk, id, jumlah, username, reff id, waktu, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/invoice?produk=VIP Plan&id=002&jumlah=1&username=Ronzz YT&reffid=123456789&waktu=Sabtu, 02 Maret 2024&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td>QR Code</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/qrcode?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>19</td>
+                          <td>Read QR Code</td>
+                          <td>url image, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/readqrcode?url=https://telegra.ph/file/373ec9da867df43387b59.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td>Quotes</td>
+                          <td>teks, author, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/quotes?teks=Jangan biarkan perasaan putus asa menyerang dirimu. Yakinlah, pada akhirnya, kamu pasti akan berhasil.&author=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                          <td>21</td>
+                          <td>Ramadhan</td>
+                          <td>teks, apikey</td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                          </td>
+                          <td>
+                            <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                          </td>
+                          <td><a target="_blank" href="/maker/ramadhan?teks=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div> <!-- row -->
+
+          <!-- End Page-content -->
+        </div> <!-- partial:partials/_footer.html -->
+        <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+          <p class="text-muted mb-1 mb-md-0">© 2024 <a href="https://youtube.com/c/RonzzYT" target="_blank">Ronzz YT</a>.</p>
+          <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+        </footer> <!-- partial -->
+      </div>
+
+    </div>

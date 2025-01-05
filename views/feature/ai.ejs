@@ -1,0 +1,129 @@
+  <div class="main-wrapper">
+    <%- include('../layouts/navbar.ejs') %>
+
+    <div class="page-wrapper">
+      <%- include('../layouts/sidebar.ejs') %>
+
+      <div class="page-content">
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title"> Artificial Intelligence</h6>
+                <p class="text-muted mb-3"> Artificial Intelligence ( Ai ) Feature <code> /ai/endpoint </code></p>
+                <div class="table-responsive pt-3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Parameter</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Try</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Chat GPT</td>
+                        <td>teks, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/chatgpt?teks=Hallo apa kabar?&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Binjie</td>
+                        <td>teks, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/binjie?teks=Hallo apa kabar?&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Open AI</td>
+                        <td>teks, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/openai?teks=Hai perkenalkan dirimu&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>To Anime</td>
+                        <td>url image, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/toanime?img=https://telegra.ph/file/5cea3471f06c4aaec3253.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Remini</td>
+                        <td>url image, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/remini?img=https://telegra.ph/file/5cea3471f06c4aaec3253.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>To Zombie</td>
+                        <td>url image, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/tozombie?img=https://telegra.ph/file/5cea3471f06c4aaec3253.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Remove Bg</td>
+                        <td>url image, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/ai/removebg?img=https://telegra.ph/file/5cea3471f06c4aaec3253.jpg&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- row -->
+
+        <!-- End Page-content -->
+      </div> <!-- partial:partials/_footer.html -->
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+        <p class="text-muted mb-1 mb-md-0">© 2024 <a href="https://youtube.com/c/RonzzYT" target="_blank">Ronzz YT</a>.</p>
+        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+      </footer> <!-- partial -->
+    </div>
+
+  </div>

@@ -1,0 +1,181 @@
+  <div class="main-wrapper">
+    <%- include('../layouts/navbar.ejs') %>
+
+    <div class="page-wrapper">
+      <%- include('../layouts/sidebar.ejs') %>
+
+      <div class="page-content">
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title"> Downloader API</h6>
+                <p class="text-muted mb-3"> Download Feature <code> /downloader/endpoint </code></p>
+                <div class="table-responsive pt-3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Parameter</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Try</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Apk</td>
+                        <td>package, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/apk?package=com.whatsapp&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Cocofun</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/cocofun?url=http://i.coco.fun/short/1513tui&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Facebook</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/facebook?url=https://web.facebook.com/watch/?v=892725951575913&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Spotify</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/spotify?url=https://open.spotify.com/track/5UHnOvi0XFvwY8ege9DNdD&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Instagram</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/instagram?url=https://www.instagram.com/p/Cul_Ct3tDGS&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Instagram Story</td>
+                        <td>username, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/igstory?username=xyzrnz118&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>MediaFire</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/mediafire?url=https://www.mediafire.com/file/1xgaov026oc44n0/photo_2021-02-05_10-13-39.jpg/file&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Pinterest</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/pinterest?url=https://id.pinterest.com/pin/688347124289528604&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Porn Hub</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/pornhub?url=https://www.pornhub.com/view_video.php?viewkey=ph5fbc6ef38fc3f&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>Snack Video</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/snackvideo?url=https://sck.io/p/jiv-dwZX&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>TikTok Mp4</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/tiktok?url=https://vt.tiktok.com/ZSFS3hoYH/&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>TikTok Mp3</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/tiktokmp3?url=https://vt.tiktok.com/ZSFS3hoYH/&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>TikTok Photo</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/tiktokphoto?url=https://vt.tiktok.com/ZSFS3g7fA/&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>Xnxx</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/xnxx?url=https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>YouTube Mp4</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/youtube?url=https://www.youtube.com/watch?v=eZskFo64rs8&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td>YouTube Mp3</td>
+                        <td>url, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/youtubemp3?url=https://www.youtube.com/watch?v=eZskFo64rs8&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td>YouTube Play</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td><div class="btn btn-sm-rounded btn-outline-success">ONLINE</div></td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/downloader/ytplay?query=bot topup provider order kuota&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- row -->
+
+        <!-- End Page-content -->
+      </div> <!-- partial:partials/_footer.html -->
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+        <p class="text-muted mb-1 mb-md-0">© 2024 <a href="https://youtube.com/c/RonzzYT" target="_blank">Ronzz YT</a>.</p>
+        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+      </footer> <!-- partial -->
+    </div>
+
+  </div>

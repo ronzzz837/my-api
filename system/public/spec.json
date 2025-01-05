@@ -1,0 +1,499 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ronzz API",
+    "description": "Documentation for Ronzz API.",
+    "version": "1.0.0",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "api.ronzzyt.com", 
+  "servers": [
+    {
+      "url": "https://api.ronzzyt.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/ai/openai": {
+      "get": {
+        "summary": "Artificial Intelligence (AI)",
+        "operationId": "get_openai",
+        "tags": [
+          "AI"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "teks",
+            "description": "teks parameters",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "teks parameters"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "result": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/chatgpt": {
+      "get": {
+        "summary": "Chat GPT using AI",
+        "operationId": "get_gpt",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "teks",
+            "description": "teks parameters",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "teks parameters"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "result": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/binjie": {
+      "get": {
+        "summary": "Binjie using AI",
+        "operationId": "get_binjie",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "teks",
+            "description": "teks parameters",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "teks parameters"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "result": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/remini": {
+      "get": {
+        "summary": "Remini using AI",
+        "operationId": "get_remini",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "img",
+            "description": "url image",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "url",
+                  "description": "url image"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "image/jpeg": {
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/toanime": {
+      "get": {
+        "summary": "To Anime using AI",
+        "operationId": "get_toanime",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "img",
+            "description": "url image",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "url",
+                  "description": "url image"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "image/jpeg": {
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/tozombie": {
+      "get": {
+        "summary": "To Zombie using AI",
+        "operationId": "get_tozombie",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "img",
+            "description": "url image",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "url",
+                  "description": "url image"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "image/jpeg": {
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/removebg": {
+      "get": {
+        "summary": "Remove Background using AI",
+        "operationId": "get_removebg",
+        "tags": [
+          "AI"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "img",
+            "description": "url image",
+            "schema": {
+              "type": "query",
+              "properties": {
+                "url": {
+                  "type": "url",
+                  "description": "url image"
+                }
+              }
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "image/png": {
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "creator": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "APIkey Auth": {
+        "type": "APIkey",
+        "description": "Insert your APIkey in the parameter.",
+        "name": "apikey",
+        "in": "query"
+      }
+    }
+  }
+}

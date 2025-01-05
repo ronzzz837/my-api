@@ -1,0 +1,388 @@
+  <div class="main-wrapper">
+    <%- include('./layouts/navbar.ejs') %> 
+
+    <div class="page-wrapper">
+      <%- include('./layouts/sidebar.ejs') %>
+
+      <div class="page-content">
+
+        <%- include('./layouts/alert.ejs') %>
+        <div class="row">
+          <div class="col-12 col-xl-12 stretch-card">
+            <div class="row flex-grow-1">
+
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">List Admin Page</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="basic-form">
+                      <form>
+                        <div class="form-group mb-4">
+                          <select id="actionSelect" class="form-control default-select form-control-sm">
+                            <option selected>Select Here</option>
+                            <option value="delusr">Delete User</option>
+                            <option value="listusr">List User</option>
+                            <option value="addPrem">Add Premium</option>
+                            <option value="delPrem">Delete Premium</option>
+                            <option value="listPrem">List Premium</option>
+                            <option value="addvip">Add VIP</option>
+                            <option value="delvip">Delete VIP</option>
+                            <option value="listvip">List VIP</option>
+                          </select>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Premium Form -->
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card" id="addprem" style="display: none;">
+                  <a href="#" class="btn btn-transparent position-absolute start-0 top-0 mt-3 ms-3" onclick="showCard('homeadmin')">
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
+                  <div class="card-body text-center">
+                    <h5 class="text-center mb-3">ADD PREMIUM</h5>
+                    <form action="/admin/premium/add" method="POST">
+                      <div class="form-group mb-3 text-center">
+                        <label for="username" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="username" class="form-control" id="username" required placeholder="Name">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="days" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="days" class="form-control" id="days" required placeholder="Days">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="token" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="token" class="form-control" id="token" required placeholder="Token">
+                      </div>
+                      <div class="form-group mb-3 text-center">
+                        <button type="submit" class="btn btn-primary me-2 text-uppercase btn-block mx-auto">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Add Premium Form -->
+              <div class="col-md-6 grid-margin">
+              <div class="card" id="listprem">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h6 class="card-title mb-0">List Premium User</h6>
+                  </div>
+                    <div class="d-flex flex-column" id="premiumList">
+                  </div>
+                </div>
+              </div>
+              <!-- Delete Premium Form -->
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card" id="delprem" style="display: none;">
+                  <a href="#" class="btn btn-transparent position-absolute start-0 top-0 mt-3 ms-3" onclick="showCard('homeadmin')">
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
+                  <div class="card-body">
+                    <h5 class="text-center mb-3">DELETE PREMIUM</h5>
+                    <form action="/admin/premium/delete" method="POST">
+                      <div class="form-group text-center mb-3">
+                        <label for="username" class="col-sm-3 col-form-label text-white">Name</label>
+                        <input type="text" name="username" class="form-control" id="username" required placeholder="Masukkan User Name">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <label for="token" class="col-sm-3 col-form-label text-white">Token</label>
+                        <input type="text" name="token" class="form-control" id="token" required placeholder="Masukkan Token">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <button type="submit" class="btn btn-primary me-2 text-uppercase btn-block mx-auto">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Delete Premium Form -->
+              
+              <!-- Add VIP Form -->
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card" id="addvip" style="display: none;">
+                  <a href="#" class="btn btn-transparent position-absolute start-0 top-0 mt-3 ms-3" onclick="showCard('homeadmin')">
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
+                  <div class="card-body text-center">
+                    <h5 class="text-center mb-3">ADD VIP</h5>
+                    <form action="/admin/vip/add" method="POST">
+                      <div class="form-group mb-3 text-center">
+                        <label for="username" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="username" class="form-control" id="username" required placeholder="Name">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="days" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="days" class="form-control" id="days" required placeholder="Days">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="token" class="col-sm-3 col-form-label text-white"></label>
+                        <input type="text" name="token" class="form-control" id="token" required placeholder="Token">
+                      </div>
+                      <div class="form-group mb-3 text-center">
+                        <button type="submit" class="btn btn-primary me-2 text-uppercase btn-block mx-auto">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Add VIP Form -->
+              <div class="col-md-6 grid-margin">
+              <div class="card" id="listvip">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h6 class="card-title mb-0">List VIP User</h6>
+                  </div>
+                    <div class="d-flex flex-column" id="viplist">
+                  </div>
+                </div>
+              </div>
+              <!-- Delete VIP Form -->
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card" id="delvip" style="display: none;">
+                  <a href="#" class="btn btn-transparent position-absolute start-0 top-0 mt-3 ms-3" onclick="showCard('homeadmin')">
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
+                  <div class="card-body">
+                    <h5 class="text-center mb-3">DELETE VIP</h5>
+                    <form action="/admin/vip/delete" method="POST">
+                      <div class="form-group text-center mb-3">
+                        <label for="username" class="col-sm-3 col-form-label text-white">Name</label>
+                        <input type="text" name="username" class="form-control" id="username" required placeholder="Masukkan User Name">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <label for="token" class="col-sm-3 col-form-label text-white">Token</label>
+                        <input type="text" name="token" class="form-control" id="token" required placeholder="Masukkan Token">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <button type="submit" class="btn btn-primary me-2 text-uppercase btn-block mx-auto">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Delete VIP Form -->
+              <div class="col-md-6 grid-margin">
+              <div class="card" id="listusr">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h6 class="card-title mb-0">List User</h6>
+                  </div>
+                    <div class="d-flex flex-column" id="usrlist">
+                  </div>
+                </div>
+              </div>
+              <!-- Delete User Form -->
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card" id="delusr" style="display: none;">
+                  <a href="#" class="btn btn-transparent position-absolute start-0 top-0 mt-3 ms-3" onclick="showCard('homeadmin')">
+                    <i class="fas fa-arrow-left"></i>
+                  </a>
+                  <div class="card-body">
+                    <h5 class="text-center mb-3">DELETE USER</h5>
+                    <form action="/admin/user/delete" method="POST">
+                      <div class="form-group text-center mb-3">
+                        <label for="username" class="col-sm-3 col-form-label text-white">Name</label>
+                        <input type="text" name="username" class="form-control" id="username" required placeholder="Masukkan User Name">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <label for="token" class="col-sm-3 col-form-label text-white">Token</label>
+                        <input type="text" name="token" class="form-control" id="token" required placeholder="Masukkan Token">
+                      </div>
+                      <div class="form-group text-center mb-3">
+                        <button type="submit" class="btn btn-primary me-2 text-uppercase btn-block mx-auto">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End Delete User Form -->
+            
+            </div>
+          </div>
+        </div>      
+      
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    const selectElement = document.getElementById('actionSelect');
+
+    // Function to show/hide the corresponding sections
+    function toggleSections() {
+  const delUsrSection = document.getElementById('delusr');
+  const listUsrSection = document.getElementById('listusr');
+  const addPremSection = document.getElementById('addprem');
+  const delPremSection = document.getElementById('delprem');
+  const listPremSection = document.getElementById('listprem');
+  const addvipSection = document.getElementById('addvip');
+  const delvipSection = document.getElementById('delvip');
+  const listvipSection = document.getElementById('listvip');
+
+  // Check if elements exist before attempting to access their styles
+  if (delUsrSection) {
+    delUsrSection.style.display = 'none';
+  }
+  if (listUsrSection) {
+    listUsrSection.style.display = 'none';
+  }
+  if (addPremSection) {
+    addPremSection.style.display = 'none';
+  }
+  if (delPremSection) {
+    delPremSection.style.display = 'none';
+  }
+  if (listPremSection) {
+    listPremSection.style.display = 'none';
+  }
+  if (addvipSection) {
+    addvipSection.style.display = 'none';
+  }
+  if (delvipSection) {
+    delvipSection.style.display = 'none';
+  }
+  if (listvipSection) {
+    listvipSection.style.display = 'none';
+  }
+
+  // Show the selected section
+  if (selectElement.value === 'delusr' && delUsrSection) {
+    delUsrSection.style.display = 'block';
+  } else if (selectElement.value === 'listusr' && listUsrSection) {
+    listUsrSection.style.display = 'block';
+  } else if (selectElement.value === 'addPrem' && addPremSection) {
+    addPremSection.style.display = 'block';
+  } else if (selectElement.value === 'delPrem' && delPremSection) {
+    delPremSection.style.display = 'block';
+  } else if (selectElement.value === 'listPrem' && listPremSection) {
+    listPremSection.style.display = 'block';
+  } else if (selectElement.value === 'addvip' && addvipSection) {
+    addvipSection.style.display = 'block';
+  } else if (selectElement.value === 'delvip' && delvipSection) {
+    delvipSection.style.display = 'block';
+  } else if (selectElement.value === 'listvip' && listvipSection) {
+    listvipSection.style.display = 'block';
+  }
+}
+
+    function timer(milliseconds) {
+      const days = Math.floor(milliseconds / (24 * 60 * 60 * 1000));
+      const hours = Math.floor((milliseconds % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+      const minutes = Math.floor((milliseconds % (60 * 60 * 1000)) / (60 * 1000));
+      const seconds = Math.floor((milliseconds % (60 * 1000)) / 1000);
+
+      return `${days} Days ${hours} Hours ${minutes} Minutes`;
+    }
+
+    function fetchPremiumUsers() {
+  $.ajax({
+    url: '/admin/premium/list',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      const premiumList = document.getElementById('premiumList');
+
+      premiumList.innerHTML = '';
+
+      data.forEach(user => {
+        const userItem = document.createElement('div');
+        userItem.innerHTML = `
+          <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
+            <div class="me-3"><img src="${user.profile}" class="rounded-circle wd-35" alt="user"></div>
+            <div class="w-100">
+              <div class="d-flex justify-content-between">
+                <h6 class="text-body mb-2">${user.name}</h6>
+                <p class="text-muted tx-12">${user.premium ? 'Premium' : 'Not Premium'}</p>
+                <p class="text-muted tx-12">Limit: ${user.limit}</p>
+              </div>
+              <p class="text-muted tx-13">${timer(user.expired)}</p> 
+            </div>
+          </a>
+        `;
+        premiumList.appendChild(userItem);
+      });
+    },
+    error: function(error) {
+      console.error('Error fetching premium users:', error);
+    }
+  });
+}
+
+    function fetchvipUsers() {
+  $.ajax({
+    url: '/admin/vip/list',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      const viplist = document.getElementById('viplist');
+
+      viplist.innerHTML = '';
+
+      data.forEach(user => {
+        const vipItem = document.createElement('div');
+        vipItem.innerHTML = `
+          <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
+            <div class="me-3"><img src="${user.profile}" class="rounded-circle wd-35" alt="user"></div>
+            <div class="w-100">
+              <div class="d-flex justify-content-between">
+                <h6 class="text-body mb-2">${user.name}</h6>
+                <p class="text-muted tx-12">${user.vip ? 'VIP' : 'Not VIP'}</p>
+              </div>
+              <p class="text-muted tx-13">${timer(user.expired)}</p> 
+            </div>
+          </a>
+        `;
+        viplist.appendChild(vipItem);
+      });
+    },
+    error: function(error) {
+      console.error('Error fetching vip users:', error);
+    }
+  });
+}
+
+    function fetchUsers() {
+  $.ajax({
+    url: '/admin/user/list',
+    method: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      const usrlist = document.getElementById('usrlist');
+
+      usrlist.innerHTML = '';
+
+      data.forEach(user => {
+        const usrItem = document.createElement('div');
+        usrItem.innerHTML = `
+          <a href="javascript:;" class="d-flex align-items-center border-bottom py-3">
+            <div class="me-3"><img src="${user.profile}" class="rounded-circle wd-35" alt="user"></div>
+            <div class="w-100">
+              <div class="d-flex justify-content-between">
+                <h6 class="text-body mb-2">${user.name}</h6>
+                <p class="text-muted tx-12">${!user.vip ? user.premium ? `PremiumㅤㅤLimit: ${user.limit}` : `FreeㅤㅤLimit: ${user.limit}` : 'VIP'}</p>
+              </div>
+              <p class="text-muted tx-13">${user.expired ? timer(user.expired) : 'No Expired'}</p> 
+            </div>
+          </a>
+        `;
+        usrlist.appendChild(usrItem);
+      });
+    },
+    error: function(error) {
+      console.error('Error fetching users:', error);
+    }
+  });
+}
+
+fetchUsers()
+fetchPremiumUsers()
+fetchvipUsers()
+    selectElement.addEventListener('change', toggleSections);
+
+    toggleSections();
+  </script>

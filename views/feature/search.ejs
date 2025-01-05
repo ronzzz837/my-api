@@ -1,0 +1,226 @@
+  <div class="main-wrapper">
+    <%- include('../layouts/navbar.ejs') %>
+
+    <div class="page-wrapper">
+      <%- include('../layouts/sidebar.ejs') %>
+
+      <div class="page-content">
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title"> Search API </h6>
+                <p class="text-muted mb-3"> Search Feature <code> /search/endpoint </code></p>
+                <div class="table-responsive pt-3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Parameter</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Try</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Google Image</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/gimage?query=loli kawai&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Google Image 2</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/gimage2?query=loli kawai&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Spotify</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/spotify?query=karena kamu&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Danbooru</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/danbooru?query=azur_lane&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Google</td>
+                        <td>query , apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/google?query=Ronzz YT&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Konachan</td>
+                        <td>query , apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/konachan?query=azur_lane&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Lirik</td>
+                        <td>judul, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/lirik?judul=karena kamu&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Pinterest</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/pinterest?query=loli kawai&apikey=<%= apikey %>"><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Kata Bijak</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/katabijak?query=kerja&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>Place</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/place?query=yogyakarta&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>Stiker Whatsapp</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/stikerwa?query=loli kawai&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>Unsplash</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/unsplash?query=mountain&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>Wallpaper</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/wallpaper?query=loli kawai&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>Anime</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/anime?query=hunter x hunter&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>Character Anime</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/character?query=killua&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td>Kusonime</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/kusonime?query=tonikaku kawaii&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td>Manga</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/manga?query=gotoubun no hanayome&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td>Nekopoi</td>
+                        <td>query, apikey</td>
+                        <td><div class="btn btn-sm-rounded btn-outline-info">GET</div></td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        </td>
+                        <td><a class="btn btn-sm-block btn-primary" href="/search/neko?query=isekai harem&apikey=<%= apikey %>""><i class="fas fa-arrow-up-right-from-square"></i>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- row -->
+
+        <!-- End Page-content -->
+      </div> <!-- partial:partials/_footer.html -->
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+        <p class="text-muted mb-1 mb-md-0">© 2024 <a href="https://youtube.com/c/RonzzYT" target="_blank">Ronzz YT</a>.</p>
+        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+      </footer> <!-- partial -->
+    </div>
+
+  </div>

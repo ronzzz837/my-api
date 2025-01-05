@@ -1,0 +1,117 @@
+  <div class="main-wrapper">
+    <%- include('../layouts/navbar.ejs') %>
+
+    <div class="page-wrapper">
+      <%- include('../layouts/sidebar.ejs') %>
+
+      <div class="page-content">
+
+        <div class="row">
+          <div class="col-md-4 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title"> Primbon API</h6>
+                <p class="text-muted mb-3"> Primbon Feature <code> /primbon/endpoint </code></p>
+                <div class="table-responsive pt-3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Parameter</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Try</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Arti Mimpi</td>
+                        <td>query, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/artimimpi?query=ular&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Arti Nama</td>
+                        <td>nama, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/artinama?nama=Ronzz YT&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Jodoh</td>
+                        <td>nama 1, nama 2, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/jodoh?nama1=udin&nama2=siti&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Tebak Gender</td>
+                        <td>nama, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/tebakgender?nama=udin&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Tebak Umur</td>
+                        <td>nama, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/tebakumur?nama=udin&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Zodiak</td>
+                        <td>query, apikey</td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-info">GET</div>
+                        </td>
+                        <td>
+                          <div class="btn btn-sm-rounded btn-outline-success">ONLINE</div>
+                        </td>
+                        <td><a target="_blank" href="/primbon/zodiak?query=leo&apikey=<%= apikey %>" class="btn btn-sm-block btn-primary" rel="nofollow" target="_blank"><i class="fas fa-arrow-up-right-from-square"></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- row -->
+
+        <!-- End Page-content -->
+      </div> <!-- partial:partials/_footer.html -->
+      <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+        <p class="text-muted mb-1 mb-md-0">© 2024 <a href="https://youtube.com/c/RonzzYT" target="_blank">Ronzz YT</a>.</p>
+        <p class="text-muted">Handcrafted With <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i></p>
+      </footer> <!-- partial -->
+    </div>
+
+  </div>
